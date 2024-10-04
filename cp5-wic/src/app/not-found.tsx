@@ -1,9 +1,16 @@
+import imagemError from "@/imgs/notfound.png"
+import Image from "next/image"
+export default async function NotFound() {
 
-export default function NotFound() {
+    const response = await fetch(`http://localhost:3000/api`);
+    const imagem = await response.json();
+    
     return (
         <div>
-            <h1>404 : Not Found</h1>
-            <p>A pagina que você tentou acessar não está disponivel!</p>
+            <Image src={imagem}
+                width={800}
+                height={500}
+                alt="Error img" />
         </div>
     )
 }
