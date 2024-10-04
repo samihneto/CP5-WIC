@@ -1,10 +1,27 @@
-export default function Teoria() {
+import Image from "next/image"
+import { tipoImage } from "@/types";
+
+export default async function Teoria() {
+
+    const response = await fetch(`http://localhost:3000/api`);
+    const imagens = await response.json();
+    const imagem:tipoImage = imagens.find( (img:tipoImage) => img.id ==  3);
+
     return (
-        <div className="bg-rose-950 p-8">
+        <div className="bg-rose-950 p-8 px-14">
             <h1 className="font-black text-5xl text-white">Catastrofismo Celestial</h1>
             <p className="mt-5 text-white text-lg">
                 <strong>Catastrofismo Celestial</strong> é a ideia central da teoria de Immanuel Velikovsky, que propõe que eventos astronômicos catastróficos influenciaram a Terra em tempos históricos e tiveram consequências dramáticas para o planeta e a humanidade. Essa ideia contraria o pensamento científico dominante da época, que favorecia o uniformitarismo, a ideia de que as mudanças geológicas e astronômicas ocorrem de forma gradual e constante ao longo de milhões de anos.
             </p>
+
+            <div className="flex justify-center bg-rose-950 mt-10">
+                <Image  
+                    src={imagem.url}
+                    className="rounded-md shadow-2xl"
+                    width={800}
+                    height={500}
+                    alt="img buraco negro destruindo um planeta" />
+            </div>
 
             <h2 className="font-bold text-4xl text-white mt-10">1. Eventos Catastróficos no Sistema Solar</h2>
 
