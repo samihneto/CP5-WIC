@@ -7,10 +7,9 @@ export default function Header() {
             <nav>
                 <ul>
                     <li><Link href="/">Home</Link></li>
-                    <li><Link href="/">Resumo da Obra</Link></li>
-                    <li><Link href="/">Sobre o autor</Link></li>
-                    <li><Link href="/">Teoria</Link></li>
-                    <li><Link href="/">API Nasa</Link></li>
+                    <li><Link href="/pag2">Resumo da Obra</Link></li>
+                    <li><Link href="/pag3">Sobre o autor</Link></li>
+                    <li><Link href="/pag-teoria">Teoria</Link></li>
                 </ul>
             </nav>
         </header>
