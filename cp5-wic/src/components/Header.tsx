@@ -8,6 +8,7 @@ export default function Header() {
                     <li>Resumo da Obra</li>
                     <li>Sobre o autor</li>
                     <li>Teoria</li>
+                    <li>API Nasa</li>
                 </ul>
             </nav>
         </header>
