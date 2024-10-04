@@ -11,5 +11,5 @@ export interface ImageSrc {
 
 export type tipoImage = {
     id: number;  
-    src: ImageSrc;  
+    url: ImageSrc;  
 }
