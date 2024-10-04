@@ -6,13 +6,13 @@ import imgVelkowsky from "@/imgs/velikowsky.jpg";
 import imgemError from "@/imgs/notfound.png";
 
 const listaImgs = [
-    {id: 1, url:},
-    {id: 2, url:},
-    {id: 3, url:},
-    {id: 4, url:},
-    {id: 5, url:},
+    {id: 1, url:img1},
+    {id: 2, url:img2},
+    {id: 3, url:img3},
+    {id: 4, url:imgVelkowsky},
+    {id: 5, url:imgemError},
 ];
 
-export async function GET(request: Request) {
+export async function GET() {
     return NextResponse.json(listaImgs);
 }
